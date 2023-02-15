@@ -7,8 +7,16 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type = "text/css" rel="stylesheet" href="/game.bundle.css">
+    <!-- <link type = "text/css" rel="stylesheet" href="/game.bundle.css"> -->
+    <!-- <link type = "text/css" rel="stylesheet" href="../css/main.css"> -->
   </head>
+
+  <!-- Going to replace this javascript with a networking file -->
+  <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      var socket = io();
+    </script>
   <body>
     <!-- create our canvas you dummy -->
     <canvas id = 'game-canvas'></canvas>
@@ -21,10 +29,10 @@
 
 
     </div>
-    <div>
+    <div id = 'leaderboard'>
       <table>
         <tr><th>Username</th><th>Score</th></tr>
-        <tr><td>Zuko</td><td>1</td></tr>
+        <tr><td>Zuko</td><td>2</td></tr>
         <tr><td></td><td></td></tr>
         <tr><td></td><td></td></tr>
         <tr><td></td><td></td></tr>
@@ -37,6 +45,6 @@
     <!-- include disconnected div later -->
     <!-- for now we're good -->
     <!-- link our bundles to this later -->
-    <script src="/game.bundle.js" async ></script>
+    <!-- <script src="/game.bundle.js" async ></script> -->
   </body>
 </html>
